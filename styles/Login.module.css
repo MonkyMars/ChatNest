@@ -1,0 +1,225 @@
+.form{
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  background-color: #808080;
+  width: 350px;
+  height: 400px;
+  border-radius: 10px;
+  outline: 2px solid var(--yellow);
+}
+
+.submitBtn{
+  border: 2px solid #000;
+  background: none;
+  color: #000;
+  position: relative;
+  padding: 4px 0;
+  width: 235px;
+  border-radius: 15px;
+  margin: 5px;
+  cursor: pointer;
+  font-family: verdana;
+}
+
+.btn_container{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.label{
+  font-family: poppins;
+  font-weight: 300;
+  left: 8px;
+  position: relative;
+  font-size: 0.95em;
+  margin-top: 10px;
+}
+.input{
+  width: 90%;
+  background-color: #8f8d8d;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  font-family: kanit, poppins, verdana;
+  height: 1.5lh;
+  font-size: 1em;
+}
+.input::placeholder{
+  font-family: Roboto Mono, kanit, sans-serif;
+  color: #403f3f;
+  font-size: 1rem;
+}
+.input:focus{
+ border: none;
+  outline: 1.7px solid var(--yellow);
+}
+.h1{
+  font-size: 1.6rem;
+  font-family: 'Work Sans';
+  font-weight: 400;
+  text-align: center;
+}
+
+.label1{
+  display: block;
+  position: relative;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  font-family: poppins;
+  font-weight: 200;
+  margin: 0;
+}
+.p{
+  margin: 0;
+  position: relative;
+  top: -12px;
+  font-family: verdana;
+  left: 60%;
+  transform: translate(-50%, -20%);
+}
+.h2{
+  text-align: center;
+  font-family: 'Work Sans';
+  font-weight: 300;
+}
+
+.btn_container1{
+  display: flex;
+  justify-content: center;
+  bottom: -65px;
+  position: relative;
+}
+
+.btnCancel{
+  border: 2px solid #cc454a;
+  background: none;
+  color: #cc454a;
+  position: relative;
+  padding: 4px 0;
+  width: 235px;
+  border-radius: 15px;
+  margin: 5px;
+  cursor: pointer;
+  font-family: verdana;
+}
+
+.btnContinue{
+  border: 2px solid #2eb02e;
+  background: none;
+  color: #2eb02e;
+  position: relative;
+  padding: 4px 0;
+  width: 235px;
+  border-radius: 15px;
+  margin: 5px;
+  cursor: pointer;
+  font-family: verdana;
+}
+
+.infoCheck{
+  position: relative;
+  top: -13px;
+}
+
+.a{
+  color: #3458eb;
+  font-family: Roboto Mono, kanit, verdana;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  margin-top: 25px;
+  cursor: pointer;
+}
+.b{
+  color: #3458eb;
+  font-family: Roboto Mono, kanit, verdana;
+  width: 100%;
+  left: 50%;
+  position: absolute;
+  margin-top: 75px;
+  cursor: pointer;
+  transform: translateX(-42%);
+}
+.a:hover, .b:hover{
+  text-decoration: underline;
+}
+.bgColor{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+
+.header{
+  background-color: #666;
+  width: 100vw;
+  height: 75px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  border-bottom: 2px solid var(--yellow);
+}
+
+.ChatNest{
+  left: 100px;
+  position: absolute;
+  transform: translate(-50%, -100%);
+  top: 50%;
+  font-family: Roboto Mono, kanit, poppins;
+  font-weight: 400;
+  font-size: 2.2rem;
+  cursor: pointer;
+  color: #212121;
+}
+.ChatNest a{
+  color: #000;
+  text-decoration: none;
+}
+.Page{
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -100%);
+  top: 50%;
+  font-family: kanit, work sans, poppins;
+  font-weight: 300;
+  font-size: 2.2rem;
+}
+
+@media screen and (max-width: 500px) {
+  .header{
+    width: 100%;
+  }
+  .ChatNest{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .form{
+    width: 95%;
+  }
+  .btn_container1, .btn_container{
+    width: 100%;
+  }
+  .form button{
+    width: 100%;
+  }
+}

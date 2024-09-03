@@ -1,0 +1,417 @@
+.main {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 500px;
+  height: 100vh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 300px;
+  padding-bottom: 500px;
+}
+
+.profile {
+  border-radius: 15px 15px 10px 10px;
+  border: 1px solid;
+  width: 400px;
+  height: calc(40vh);
+  background-color: #707070;
+  z-index: 0;
+  margin-top: 90px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.you {
+  border-radius: 15px 15px 10px 10px;
+  border: 1px solid;
+  width: 400px;
+  height: auto;
+  background-color: #707070;
+  z-index: 0;
+  margin-top: 25px;
+  margin-bottom: 80px;
+  padding-bottom: 25px;
+}
+
+.profile_banner{
+  width: 100%;
+  height: 120px;
+  border-radius: 15px 15px 0px 0px;
+}
+.profile_details{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  justify-content: flex-start;
+  margin-left: 15px;
+  top: 15px;
+}
+.profile_icon{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+}
+.profile_label{
+  position: relative;
+  font-family: Roboto mono;
+  font-size: 1.85rem;
+  margin-left: 12.5px;
+}
+
+.main::-webkit-scrollbar {
+  display: none;
+}
+.profile_h1{
+  font-size: 1.8rem;
+  font-family: 'Work Sans';
+  font-weight: 400;
+  text-align: center;
+}
+
+.you_label{
+  display: inline-block;
+}
+.you_label{
+  display: block;
+  left: 20%;
+  position: relative;
+  font-family: 'Work Sans';
+  font-size: 19px;
+}
+.you_input{
+  display: inline-flex;
+  justify-items: center;
+  left: 45%;
+  width: 190px;
+  position: relative;
+  transform: translateX(-50%);
+  font-family: kanit, poppins, verdana;
+  height: 1.25lh;
+  border-radius: 5px;
+  border: none;
+  background-color: #8f8d8d;
+  box-sizing: border-box;
+  padding: 2px;
+  padding-left: 5px;
+  font-size: 1rem;
+  margin: 2px;
+  font-weight: 300;
+}
+.you_input:disabled{
+  font-family: Roboto Mono, kanit, sans-serif;
+  color: #403f3f;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.you_input:focus{
+  outline: 2px solid var(--yellow);
+}
+.buttonSave{
+  position: relative;
+  left: 82px;
+  background-color: #4287f5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-family: poppins;
+}
+.buttonEdit{
+  position: relative;
+  left: 82px;
+  background-color: #4e5052;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-family: poppins;
+}
+.SaveChanges{
+  position: absolute;
+  background-color: #4e5052;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-family: poppins;
+  right: 15px;
+  bottom: 15px;
+  z-index: 5;
+}
+.banner_div{
+  width: 100%;
+  height: 120px;
+  border-radius: 15px 15px 0px 0px;
+  position: relative;
+}
+.banner_left{
+  left: 15px;
+  top: 5px;
+  position: absolute;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  transform:scale(1.5);
+  cursor: pointer;
+  user-select: none;
+  color: #666;
+}
+.banner_right{
+  right: 0px;
+  top: 5px;
+  position: absolute;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  transform:scale(1.5);
+  cursor: pointer;
+  user-select: none;
+  color: #666;
+}
+
+.icon_div {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1; 
+}
+
+.pencil_div {
+  background-color: #fff; 
+  position: absolute; 
+  top: 0;
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  z-index: 2; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5;
+  display: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.pencil {
+  width: 50%; 
+  height: 50%; 
+  z-index: 3; 
+  opacity: 1.5;
+}
+
+.icon_div:hover .pencil_div{
+  display: flex;;
+}
+
+.Select_div{
+  width: 425px;
+  height: 240px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #414241;
+  display: block;
+  border-radius: 15px 15px 10px 10px;
+  padding: 5px;
+}
+
+.Select_icon{
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: 25px;
+  cursor: pointer;
+}
+
+.Select{
+  overflow-x: scroll;
+  display: flex;
+  position: relative;
+  top: -25px;
+}
+
+.Select::-webkit-scrollbar {
+  display: none;
+}
+
+.Select_heading{
+  font-family: poppins;
+  text-align: center;
+}
+
+.btnCancel{
+  border: 2px solid #cc454a;
+  background: none;
+  color: #cc454a;
+  position: relative;
+  padding: 4px 0;
+  width: 235px;
+  border-radius: 15px;
+  margin: 5px;
+  cursor: pointer;
+  font-family: verdana;
+}
+
+.btnContinue{
+  border: 2px solid #2eb02e;
+  background: none;
+  color: #2eb02e;
+  position: relative;
+  padding: 4px 0;
+  width: 235px;
+  border-radius: 15px;
+  margin: 5px;
+  cursor: pointer;
+  font-family: verdana;
+}
+
+.btnDiv{
+  display: flex;
+  position: relative;
+  bottom: 40px;
+  justify-content: center;
+}
+
+.Select_icon.selected {
+  outline: 4px solid #2eb02e;
+  width: 96px !important;
+  height: 96px !important;
+}
+
+.return_button{
+  background-color: #4e5052;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-family: poppins;
+  position: relative;
+  top: 80px;
+  left: -25%;
+  z-index: 5;
+}
+.return_button a{
+  color: #fff;
+  text-decoration: none;
+}
+.number{
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  font-family: poppins;
+  font-size: 15px;
+  color: hsl(0, 0%, 10%);
+}
+.SettingsIcon{
+  position: absolute;
+  width: 35px;
+  height: auto;
+  right: 10px;
+  top: 135px;
+  cursor: pointer;
+  z-index: 8;
+}
+
+.AvatarSelection{
+  background-color: #999999;
+  width: 360px;
+  height: 420px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  outline: 2px solid var(--yellow);
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.AvatarSelection h1{
+  font-family: Roboto Mono, kanit, poppins;
+  text-align: center;
+}
+
+.AvatarItemCategory, .AvatarItem{
+  min-width: 50px;
+  min-height: 50px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.AvatarItemCategory img, .AvatarItem img{
+  border-radius: 50%;
+}
+.AvatarItemCategory label{
+  font-family: poppins;
+  position: absolute;
+  font-weight: 300;
+}
+.AvatarList, .AvatarSelectionMain{
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  min-height: 75%;
+  max-height: 75%;
+  top: 25%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: absolute;
+  grid-gap: 35px;
+  padding: 19px;
+  box-sizing: border-box;
+}
+.AvatarList{
+  top: 25px;
+  min-height: 100%;
+  max-height: 100%;
+}
+.AvatarSelection .Return, .AvatarSelection .Close{
+  position: relative;
+  left: -35%;
+  top: 15px;
+  background-color: #4e5052;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-family: poppins;
+  z-index: 6;
+}
+.AvatarSelection .Close{
+  left: 35%;
+  top: -15px;
+}
+@media screen and (max-width: 400px) {
+  .main{
+    width: 100%;
+  }
+  .profile, .you{
+    width: 95%;
+  }
+}

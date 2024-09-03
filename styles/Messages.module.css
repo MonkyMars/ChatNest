@@ -1,0 +1,581 @@
+.messageList {
+  background-color: #666;
+  top: 150px;
+  position: relative;
+  left: 0;
+  width: 300px;
+  height: calc(100vh - 150px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: block;
+  box-sizing: border-box;
+  margin-top: 0px;
+  padding: 1px;
+}
+
+.messageList::-webkit-scrollbar {
+  display: none;
+}
+
+.messageItem {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  outline: 1px solid #a1a1a1;
+  width: calc(100% - 20px);
+  position: relative;
+  padding: 10px;
+  height: 55px;
+  margin-top: 0.5px;
+  margin-bottom: 0.5px;
+  border: 1px solid var(--yellow);
+  cursor: pointer;
+}
+
+.ItemImg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+  margin-left: 25px;
+}
+.ItemLabel {
+  font-family: poppins;
+  font-weight: 300;
+  margin-left: 20px;
+  position: relative;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.inputDiv {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  width: calc(100% - 300px);
+  background: #8f8d8d;
+  z-index: 5;
+}
+.input {
+  width: 100%;
+  background-color: #8f8d8d;
+  border: none;
+  height: 1.25lh;
+  font-family: kanit;
+  font-size: 1.15rem;
+  position: relative;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.input:is(:-webkit-autofill, :autofill) {
+  font-family: kanit !important;
+  font-size: 1.15rem !important;
+  background-color: #8f8d8d !important;
+}
+
+.input::placeholder {
+  font-family: Roboto Mono, kanit, sans-serif;
+  color: #403f3f;
+  font-size: 1.1rem;
+}
+
+.input:focus {
+  border: none;
+  outline: 2px solid var(--yellow);
+}
+
+.send {
+  position: absolute;
+  background: #3458eb;
+  border: none;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -50px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.send > img {
+  width: 35px;
+  height: 35px;
+}
+.main {
+  position: absolute;
+  top: 75px;
+  right: 0;
+  width: calc(100% - 300px);
+  height: calc(100vh - 30px);
+  z-index: 1;
+  padding-bottom: 50px;
+}
+
+.MessageSend, .MessageReceive {
+  border-radius: 15px 15px 10px 10px;
+  position: relative;
+  max-width: 400px; 
+  min-width: 15%; 
+  box-sizing: border-box; 
+  padding: 10px;
+  margin: 10px;
+  width: auto;
+  display: inline-block;
+}
+.MessageSend {
+  background-color: #035afc;
+  align-self: flex-end; 
+}
+.MessageReceive {
+  background-color: #707070;
+  align-self: flex-start; 
+}
+.MessageSend_img, .MessageReceive_img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  margin-right: 8px;
+}
+.MessageSend_sender, .MessageReceive_sender {
+  font-family: poppins;
+  font-weight: 300;
+  top: 0;
+  position: relative;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+.MessageSend_details, .MessageReceive_details {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+.MessageSend_content, .MessageReceive_content {
+  font-family: verdana;
+  font-weight: 300;
+  word-break: break-word;
+  max-width: 100%;
+  text-align: left;
+}
+.MessagesSend, .MessagesReceive {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.MessageReceive_timestamp, .MessageSend_timestamp{
+  font-family: poppins;
+  font-size: 14px;
+}
+.MessageContainer {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; 
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: calc(100% - 150px);  
+  padding-bottom: 20px;
+}
+
+.AddFriend{
+  background-color: #808080;
+  border-radius: 15px 15px 10px 10px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  height: 250px;
+  z-index: 6;
+  outline: 1px solid var(--yellow);
+}
+
+.AddFriend h1{
+  font-family: poppins;
+  font-weight: 300;
+  color: #303030;
+  top: -20px;
+  position: relative;
+}
+.AddFriend input{
+  background: #8f8d8d;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  width: 90%;
+  height: 1.2lh;
+  font-size: 1rem;
+  font-family: kanit, poppins, verdana;
+}
+.AddFriend input:focus{
+  outline: 2px solid var(--yellow);
+}
+.AddFriend input::placeholder{
+  font-family: Roboto Mono, kanit, sans-serif;
+  color: #403f3f;
+  font-size: 0.95rem;
+}
+.AddFriend button{
+  border: 2px solid #303030 !important;
+  background: none;
+  color: #303030;
+  position: relative;
+  padding: 4px 0;
+  min-width: 125px;
+  border-radius: 15px !important;
+  margin: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-family: verdana;
+  cursor: pointer;
+}
+
+.ProfileMenu_div{
+  border: 1px solid;
+  width: 250px;
+  height: 320px;
+  left: 50vw;
+  top: 50vh;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 15px;
+  background-color: #666;
+  z-index: 5;
+} 
+.ProfileMenu_banner{
+  width: 100%;
+  height: 75px;
+  border-radius: 15px 15px 0 0;
+  border-bottom: 2px solid;
+}
+.ProfileMenu_details{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  font-family: Roboto Mono, kanit, poppins;
+  margin: 10px;
+}
+
+.ProfileMenu_label{
+  font-size: 1.75rem;
+  position: relative;
+  left: 10px;
+}
+
+.ProfileMenu_img{
+  width: 65px;
+  height: 65px;
+  position: relative;
+  border-radius: 50%;
+}
+
+.Toolbar{
+  position: absolute;
+  background-color: #666;
+  left: 0;
+  top: 75px;
+  height: 75px;
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.Toolbar img{
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.Toolbar img:nth-child(2) {
+   margin-right: 5px;
+}
+.Toolbar img:hover{
+  transform: scale(0.915);
+}
+.Toolbar h1{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: poppins;
+  font-weight: 400;
+}
+
+.friendList{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 400px;
+  background-color: #707070;
+  border-radius: 15px 15px 10px 10px;
+  z-index: 1;
+  outline: 1px solid var(--yellow);
+}
+.friendList h1{
+  text-align: center;
+  font-family: poppins;
+  font-weight: 500;
+}
+.btnContainer{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 10px;
+}
+.btnContainer button{
+  background-color: #4e5052;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-family: poppins;
+}
+.btnContainer button:nth-child(3) {
+  background-color: green;
+}
+
+.friendList main{
+  position: relative;
+  width: 100%;
+  height: 265px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.CloseBtn{
+  background-color: #4e5052;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-family: poppins;
+  right: 10px;
+  bottom: 10px;
+  position: absolute;
+}
+.btnDiv{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+.btnDiv button{
+  background: transparent;
+  border: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.btnDiv button img{
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+}
+
+.ProfileMenu_date{
+  bottom: 10px;
+  position: fixed;
+  width: 100%;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.activated{
+  width: calc(100% - 350px);
+  left: 300px;
+}
+.newDate{
+  position: relative;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+  font-family: Roboto Mono, kanit, poppins;
+  outline: 2px solid var(--yellow);
+  width: 75px;
+  height: 1.2lh;
+  padding: 7px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.ReceivingEndSpan{
+  display: flex;
+  position: absolute;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+  font-family: Roboto Mono, kanit, poppins;
+  outline: 2px solid var(--yellow);
+  width: auto;
+  height: 1.2lh;
+  padding: 7px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  top: 50px;
+  z-index: 6;
+}
+.mentionMenu{
+  position: absolute;
+  bottom: 20%;
+  left: 0.5%;
+  width: 300px;
+  height: 80px;
+  background-color: #808080;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border-radius: 5px;
+  font-family: Robotoo Mono, kanit, poppins;
+  z-index: 4;
+  outline: 2px solid var(--yellow);
+  padding: 5px;
+}
+.mentionMenu label{
+  position: relative;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 5;
+  color: #212121;
+  width: 98%;
+  height: 50%;
+  padding: 2px;
+  border-radius: 5px;
+}
+.mentionMenu label:hover{
+  background-color: #707070;
+}
+
+.contextMenu{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #808080;
+  border-radius: 5px;
+  font-family: Robotoo Mono, kanit, poppins;
+  color: #212121;
+  width: 140px;
+  height: 120px;
+  padding: 2px;
+  outline: 2px solid var(--yellow);
+  z-index: 6; 
+  font-size: 1.3rem;
+}
+.contextMenu label:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+.friendWarning{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 275px;
+  transform: translate(-50%, -50%);
+  background-color: #808080;
+  outline: 2px solid var(--yellow);
+  border-radius: 5px;
+  z-index: 99;
+}
+.friendWarning h1{
+  font-size: 1rem;
+  font-family: Roboto Mono, kanit;
+  color: #212121;
+  text-align: center;
+ 
+}
+.buttonDiv{
+  display: flex;
+  justify-content: space-around;
+}
+.buttonDiv button{
+  border: 2px solid #303030 !important;
+  background: none;
+  color: #303030;
+  position: relative;
+  padding: 4px 0;
+  min-width: 125px;
+  border-radius: 15px !important;
+  margin: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-family: verdana;
+  cursor: pointer;
+}
+@media screen and (max-width: 1080px) {
+  .messageList{
+    width: 25%;
+  }
+  .ItemLabel{
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .ItemImg{
+    margin: 0;
+  }
+  .Toolbar{
+    width: 25%;
+  }
+  .Toolbar h1{
+    display: none;
+  }
+  .Toolbar{
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+  }
+  .inputDiv{
+    width: 75%;
+    border-right: none !important;
+    left: 25%;
+    background-color: #ccc;
+    box-sizing: border-box;
+  }
+  .send{
+    border-radius: 0;
+    right: -55px;
+  }
+  .input:active .main{
+    background-color: pink;
+  }
+  .main{
+    width: 75%;
+  }
+  .activated{
+    width: calc(75% - 55px);
+  }
+}
+@media screen and (max-width: 600px) {
+  .ItemLabel{
+     display: none;
+  }
+}

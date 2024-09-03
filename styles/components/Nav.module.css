@@ -1,0 +1,400 @@
+.Nav {
+  background-color: #666;
+  min-width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 0px 10px;
+  z-index: 5;
+  transition: transform 0.3s ease; 
+  border-bottom: 2px solid var(--yellow);
+}
+
+.h1{
+  font-family: Roboto Mono, kanit, sans-serif;
+  color: #212121;
+  font-weight: 400;
+  font-size: 2.2em;
+}
+.header{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.User_div{
+  position: relative;
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  align-items: center;
+}
+.UserDetails_div{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+}
+.User_label{
+  font-family: 'verdana';
+  font-weight: 300;
+  font-size: 1.5em;
+  text-align: center;
+  z-index: 5;
+  position: relative;
+  cursor: pointer;
+  margin-right: 12.5px;
+  user-select: none;
+}
+
+.User_img{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  position: relative;
+  margin-left: 5px;
+  right: 5px;
+}
+
+.ProfileMenu_div{
+  border: 1px solid;
+  width: 250px;
+  height: 320px;
+  right: 15px;
+  top: 90px;
+  position: absolute;
+  border-radius: 15px;
+  background-color: #707070;
+  z-index: 5;
+  outline: 1.2px solid var(--yellow);
+  border: none;
+} 
+.ProfileMenu_banner{
+  width: 100%;
+  height: 75px;
+  border-radius: 15px 15px 0 0;
+  border-bottom: 1.2px solid var(--yellow);
+}
+.ProfileMenu_details{
+  display: flex;
+  position: relative;
+  font-family: Roboto Mono;
+  justify-content: flex-start;
+  align-items: center;
+}
+.ProfileMenu_label{
+  font-size: 1.5rem;
+  position: relative;
+  margin-left: 15px;
+}
+
+.ProfileMenu_Btn_Container{
+ display: block;
+ position: absolute;
+ bottom: 10px;
+ left: 50%;
+ transform: translateX(-50%)
+}
+.ProfileMenu_Btn_Settings{
+  border: 2px solid #212121;
+  background: none;
+  color: #212121;
+  position: relative;
+  padding: 4px 0;
+  width: 235px;
+  border-radius: 15px;
+  margin: 5px;
+  cursor: pointer;
+  font-family: verdana;
+}
+.ProfileMenu_Btn_Settings a{
+  color: #212121;
+  text-decoration: none;
+}
+.ProfileMenu_Btn{
+  background: none;
+  position: relative;
+  padding: 4px 0;
+  width: 235px;
+  border-radius: 15px;
+  margin: 5px;
+  cursor: pointer;
+  font-family: verdana;
+}
+.Logout{
+   color: #cc454a !important;
+   border: 2px solid #cc454a !important;
+}
+.Login{
+  color: #2677B6 !important;
+  border: 2px solid #2677B6 !important;
+}
+.ProfileMenu_img{
+  width: 65px;
+  height: 65px;
+  position: relative;
+  left: 8px;
+  top: 8px;
+  border-radius: 50%;
+}
+.ProfileMenu_pencil {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  right: 10px;
+  top: 10px;
+}
+
+.ProfileMenu_pencil::before {
+  content: '';
+  background-color: #666;
+  opacity: 0.6;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  z-index: 1; 
+}
+
+.ProfileMenu_Link{
+  text-decoration: none;
+  color: #000;
+}
+.ProfileMenu_Link1{
+  text-decoration: none;
+  color: #cc454a;
+}
+
+.chat{
+  position: relative;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  transition: all 0.2s; 
+  margin-right: 0;
+}
+.noddown{
+  width: 55px;
+  height: 55px;
+  transition: all 0.3s;
+  transform: rotate(-180deg)
+}
+
+.up{
+  transform: rotate(0deg)
+}
+.noddown:hover{
+  width: 52px !important;
+  height: 52px !important;
+}
+.chat:hover{
+  width: 42px;
+  height: 42px;
+}
+.Message_incoming_div{
+  background-color: #707070;
+  width: 300px;
+  max-height: 300px;
+  height: auto;
+  max-height: 150px;
+  position: absolute;
+  top: 100px;
+  left: 15px;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 6;
+  cursor: pointer;
+}
+.Message_incoming_div img{
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  margin: 0 5px 0 5px
+}
+.Message_incoming_div p {
+  color: #000;
+  font-size: 16px;
+  font-family: Poppins, sans-serif;
+  margin: 5px;
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  max-width: 100%;
+}
+.Message_incoming_div label{
+  color: #000;
+  font-size: 22px;
+  font-family: poppins;
+  margin: 5px;
+}
+.Message_incoming_details{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+.Message_incoming_tools{
+  position: absolute;
+  display: flex;
+  right: 5px;
+  top: 5px;
+  flex-direction: row;
+  
+}
+.Message_incoming_tools img{
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  margin: 5px;
+}
+.Linkmenu{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 95px;
+  left: 25px;
+  height: 125px;
+  width: 125px;
+  background-color: #808080;
+  padding: 20px;
+  border-radius: 5px;
+  outline: 1px solid var(--yellow);
+  z-index: 10;
+}
+.Linkmenu a{
+  color: #212121;
+  text-decoration: none;
+  font-family: Roboto Mono, kanit, sans-serif;
+  margin: 3px;
+  font-size: 1.25rem
+}
+.Linkmenu a:hover{
+  text-decoration: underline;
+}
+
+.loader {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 8;
+  width: fit-content;
+  padding-bottom: 5px;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 30px;
+  overflow: hidden;
+  color: #0000;
+  text-shadow: 0 0 0 #000,10ch 0 0 #000;
+  background: linear-gradient(#000 0 0) bottom left/0% 3px no-repeat;
+  animation: l14 1.5s infinite;
+}
+.loader:before {
+  content: "Loading...";
+}
+@keyframes l14 {
+    80%  {text-shadow:    0  0 0 #000,10ch 0 0 #000;background-size:100% 3px}
+    100% {text-shadow: -10ch 0 0 #000,0    0 0 #000}
+}
+
+.accStatus{
+  position: relative;
+  bottom: 10px;
+  right: -55px;
+  z-index: 8;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+}
+
+.timebar{
+  animation: timebar 8s;
+  height: 0.25lh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--yellow);
+  border-radius: 0 5px 0 5px;
+}
+
+.tutorial{
+  width: 20rem;
+  background-color: #999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  height: 20rem;
+  border: 2px solid var(--yellow);
+  border-radius: 10px;
+  padding: 10px;
+  font-family: Roboto Mono, kanit, poppins;
+  color: #212121;
+  z-index: 32;
+}
+.tutorial div{
+  display: flex;
+  gap: 20px;
+  margin-top: auto;
+  width: 100%;
+  z-index: 33;
+}
+.tutorial div button{
+  border: 2px solid #212121;
+  background: none;
+  color: #212121;
+  position: relative;
+  padding: 4px 0;
+  width: 100%;
+  border-radius: 15px;
+  margin: 5px;
+  cursor: pointer;
+  font-family: verdana;
+}
+.tutorial div button a{
+  color: var(--green);
+  text-decoration: none;
+}
+.tutorial div button:nth-child(1) {
+  color: var(--green);
+  border: 2px solid var(--green);
+}
+.tutorial div button:nth-child(2) {
+  color: var(--red);
+  border: 2px solid var(--red);
+  z-index: 34;
+}
+
+@keyframes timebar {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .User_p, .User_label{
+    display: none;
+  }
+}
